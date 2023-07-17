@@ -51,6 +51,9 @@ module.exports = { flags: {
         storeUrl: "oleksandr-dev.myshopify.com"
       },
     },
-
+    {
+      resolve: `gatsby-plugin-create-client-paths`,
+      options: { prefixes: [`/dev-404-page/*`] },
+    },
   ],
 }
