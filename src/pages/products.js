@@ -16,7 +16,7 @@ const ProductsPage = ({ data }) => (
                         <Link to={`/products/${node.handle}`}>{node.title}</Link>
                         {" - "}${node.priceRangeV2.minVariantPrice.amount}
                     </h3>
-                    <img src={node.featuredImage.originalSrc} alt={node.title} />
+                    {/*<img src={node.featuredImage.originalSrc} alt={node.title} />*/}
                     <p>{node.description}</p>
                 </li>
             ))}
