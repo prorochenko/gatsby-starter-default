@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import * as css from "./products.module.css"
 import Layout from "../components/layout"
+import exampleImage from "../images/example.png";
 
 const ProductsPage = ({ data }) => (
     <Layout>
@@ -16,7 +17,7 @@ const ProductsPage = ({ data }) => (
                         {" - "}${node.priceRangeV2.minVariantPrice.amount}
                     </h3>
 
-                    <img src="../images/example.png" alt={node.title} />
+                    <img src={node.featuredImage.originalSrc  ? node.featuredImage.originalSrc :  exampleImage} alt={node.title} />
                     <p>{node.description}</p>
                 </li>
             ))}
