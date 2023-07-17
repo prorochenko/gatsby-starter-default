@@ -50,10 +50,6 @@ module.exports = { flags: {
         password: "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",
         storeUrl: "oleksandr-dev.myshopify.com"
       },
-    },
-    {
-      resolve: `gatsby-plugin-create-client-paths`,
-      options: { prefixes: [`/dev-404-page/*`] },
-    },
+    }
   ],
 }
