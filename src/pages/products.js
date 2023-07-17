@@ -10,16 +10,16 @@ const ProductsPage = ({ data }) => (
         <h1>Products</h1>
         <ul className={css.list}>
 
-            {/*{data.allShopifyProduct.edges.map(({ node }) => (*/}
-            {/*    <li key={node.shopifyId}>*/}
-            {/*        <h3>*/}
-            {/*            <Link to={`/products/${node.handle}`}>{node.title}</Link>*/}
-            {/*            {" - "}${node.priceRangeV2.minVariantPrice.amount}*/}
-            {/*        </h3>*/}
-            {/*        <img src={node.featuredImage.originalSrc} alt={node.title} />*/}
-            {/*        <p>{node.description}</p>*/}
-            {/*    </li>*/}
-            {/*))}*/}
+            {data.allShopifyProduct.edges.map(({ node }) => (
+                <li key={node.shopifyId}>
+                    <h3>
+                        <Link to={`/products/${node.handle}`}>{node.title}</Link>
+                        {" - "}${node.priceRangeV2.minVariantPrice.amount}
+                    </h3>
+                    <img src={node.featuredImage.originalSrc} alt={node.title} />
+                    <p>{node.description}</p>
+                </li>
+            ))}
         </ul>
     </Layout>
        </>
