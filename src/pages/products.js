@@ -16,7 +16,7 @@ const ProductsPage = ({ data }) => (
                         {" - "}${node.priceRangeV2.minVariantPrice.amount}
                     </h3>
 
-                    <img src={node.featuredImage?.originalSrc ? node.featuredImage.originalSrc : '/images.example.png'} alt={node.title} />
+                    <img src="../images/example.png" alt={node.title} />
                     <p>{node.description}</p>
                 </li>
             ))}
