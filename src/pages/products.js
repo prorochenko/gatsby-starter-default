@@ -1,9 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+
 import * as css from "./products.module.css"
-
-
-
 import Layout from "../components/layout"
 
 const ProductsPage = ({ data }) => (
