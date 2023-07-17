@@ -5,7 +5,6 @@ import * as css from "./products.module.css"
 import Layout from "../components/layout"
 
 const ProductsPage = ({ data }) => (
-   <> <div>hey</div>
     <Layout>
         <h1>Products</h1>
         <ul className={css.list}>
@@ -23,7 +22,6 @@ const ProductsPage = ({ data }) => (
             ))}
         </ul>
     </Layout>
-       </>
 )
 
 export default ProductsPage
