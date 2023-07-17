@@ -34,6 +34,7 @@ const links = [
 ]
 
 const samplePageLinks = [
+  { text: "MY PRODUCTS FROM SHOPIFY", url: "products" },
   {
     text: "Page 2",
     url: "page-2",

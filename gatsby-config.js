@@ -1,3 +1,5 @@
+require("dotenv").config()
+
 /**
  * Configure your Gatsby site with this file.
  *
@@ -37,6 +39,13 @@ module.exports = {
         // theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-source-shopify`,
+      options: {
+        password: process.env.GATSBY_SHOPIFY_PASSWORD,
+        storeUrl: process.env.GATSBY_SHOPIFY_STORE_URL
       },
     },
   ],
