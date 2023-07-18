@@ -15,8 +15,10 @@ const ProductTemplate = ({ pageContext }) => {
         <Layout>
             <h1>{product.title}</h1>
             <div>{product.description}</div>
-            <img src={product.featuredImage?.originalSrc  ? product.featuredImage.originalSrc :  exampleImage} alt={product.title} />
-                <button onClick={addProductToCart} type="button" className={css.buttonCart}>
+           		 <div className={css.wrapper}><img src={product.featuredImage?.originalSrc  ? product.featuredImage.originalSrc :  exampleImage} alt={product.title} className={css.image}/>
+					 <div className={css.box}>
+						 <button onClick={addProductToCart} type="button"
+								 className={css.buttonCart}>
 		 <span className={css.circle}>
 			<span className={css.icon_cart}>
 				<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +56,9 @@ const ProductTemplate = ({ pageContext }) => {
 			<span className={`${css.text} ${css.text_after}`}>Added to cart</span>
 		</span>
                 </button>
-			<p>Кількість товару в корзині: {cartCount}</p>
+						 <p>Кількість товару в корзині: {cartCount}</p>
+					 </div>
+			</div>
         </Layout>
     )
 }
